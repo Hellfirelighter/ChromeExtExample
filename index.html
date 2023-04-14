@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Random Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+	body {min-width: 480px}
+  </style>
+  <body>
+    <div class="container mt-4 mb-4">
+      <h2 class="text-center col-12">Random Password Generator</h1>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="password-length">Password Length:</label>
+            <input
+              type="range"
+              class="form-control-range"
+              id="password-length"
+              min="6"
+              max="20"
+              value="10"
+            />
+            <p class="text-center">
+              Length:
+              <span id="password-length-display">10</span>
+            </p>
+          </div>
+          <button class="btn btn-primary btn-block" id="generate-password">
+            Generate Password
+          </button>
+          <div class="input-group mt-4">
+            <input
+              type="text"
+              class="form-control"
+              id="generated-password"
+              readonly
+            />
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="copy-password">
+                Copy Password
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>
